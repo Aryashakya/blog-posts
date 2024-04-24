@@ -11,17 +11,22 @@ A simple web application built with Flask and React to perform CRUD operations o
 ## Set up Flask backend
 
 1. Navigate to the backend directory:
-   
-    `cd backend`
+
+   ```
+   cd backend
+   ```
 
 2. Install the required Python packages:
 
-    `pip install flask flask-sqlalchemy flask-restful flask-cors`
+   ```
+   pip install -r requirements.txt
+   ```
 
 3. Run the Flask application:
 
-    `python main.py`
-
+   ```
+   python main.py
+   ```
 
 The backend server is started on http://localhost:5000/.
 
@@ -29,14 +34,20 @@ The backend server is started on http://localhost:5000/.
 
 1. Navigate to the frontend directory:
 
-    `cd frontend`
+   ```
+    cd frontend
+   ```
 
 2. Install the required npm packages:
 
-    `npm install`
+   ```
+   npm install
+   ```
 
 3. Start the React application:
 
-    `npm run dev`
+   ```
+   npm run dev
+   ```
 
 Open http://localhost:5173/ to view it in the browser
