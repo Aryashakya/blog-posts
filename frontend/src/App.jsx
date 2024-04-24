@@ -44,7 +44,9 @@ function App() {
         updateBlog={openEditModal}
         updateCallback={onUpdate}
       />
-      <button onClick={openCreateModal}>Create New Blog</button>
+      <button className="create_button" onClick={openCreateModal}>
+        Create New Blog
+      </button>
       {isModalOpen && (
         <div className="modal">
           <div className="modal-content">

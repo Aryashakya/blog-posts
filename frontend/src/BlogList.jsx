@@ -1,4 +1,4 @@
-import React from "react";
+import "./BlogList.css";
 
 const BlogList = ({ blogs, updateBlog, updateCallback }) => {
   const onDelete = async (id) => {
@@ -25,12 +25,18 @@ const BlogList = ({ blogs, updateBlog, updateCallback }) => {
       <h2>Blogs</h2>
 
       {blogs.map((blog) => (
-        <ul key={blog.id}>
-          <li>{blog.title}</li>
-          <li>{blog.content}</li>
-          <button onClick={() => updateBlog(blog)}>Update</button>
-          <button onClick={() => onDelete(blog.id)}>Delete</button>
-        </ul>
+        <div key={blog.id}>
+          <ul>
+            <li className="title">{blog.title}</li>
+            <li className="content">{blog.content}</li>
+            <button onClick={() => updateBlog(blog)}>
+              <i className="fa fa-pencil"></i> Edit
+            </button>
+            <button onClick={() => onDelete(blog.id)}>
+              <i className="fa fa-trash"></i> Delete
+            </button>
+          </ul>
+        </div>
       ))}
     </div>
   );

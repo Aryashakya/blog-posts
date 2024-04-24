@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./BlogForm.css";
 
 const BlogForm = ({ existingBlog = {}, updateCallback }) => {
   const [title, setTitle] = useState(existingBlog.title || "");
@@ -16,7 +17,7 @@ const BlogForm = ({ existingBlog = {}, updateCallback }) => {
       "http://127.0.0.1:5000/" +
       (updating ? `update_blog/${existingBlog.id}` : "create_blog");
     const options = {
-      method: updating ? "PATCH" : " POST",
+      method: updating ? "PATCH" : "POST",
       headers: {
         "Content-Type": "application/json",
       },
